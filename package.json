@@ -1,0 +1,8 @@
+{
+  "name": "golang-docker-healthcheck",
+  "version": "0.0.1",
+  "author": "Soluto",
+  "license": "MIT",
+  "private": false,
+  "repository": "github:Soluto/golang-docker-healthcheck",
+}
