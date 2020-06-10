@@ -3,9 +3,6 @@ services:
 - docker
 language: shell
 dist: bionic
-arch:
-- amd64
-- arm64
 os: linux
 env:
   global:
