@@ -10,8 +10,8 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o health-check ./healthcheck
 # Stage 2: Create release image
 FROM scratch as releaseImage
 
-COPY --from=builder /go/src/github.com/grewhit25/healthcheck-server/server /usr/loca/bin/server
-COPY --from=builder /go/src/github.com/grewhit25/healthcheck-server/health-check /usr/loca/bin/healthcheck
+COPY --from=builder /go/src/github.com/grewhit25/healthcheck-server/server /usr/local/bin/server
+COPY --from=builder /go/src/github.com/grewhit25/healthcheck-server/health-check /usr/local/bin/healthcheck
 
 ENV PORT=8080
 EXPOSE $PORT
