@@ -1,7 +1,7 @@
 # Stage 1: Build executable
-FROM golang:alpine as builder
+FROM golang as builder
 
-RUN go get gitgithub.com/grewhit25/healthcheck-server
+RUN go get github.com/grewhit25/healthcheck-server
 WORKDIR /go/src/github.com/grewhit25/healthcheck-server
 
 RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o server
